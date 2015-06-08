@@ -1,0 +1,39 @@
+<html>
+
+<head>
+<title>Report for Project Shine</title>
+</head>
+
+<!--begin.rcode,echo=FALSE,results='asis' 
+nDefect<-nrow(recordsWithDefect) 
+nNonDefect<-nrow(recordsWithNoDefect)
+end.rcode-->
+
+<body>
+<p>Starting from January 15, 2013 until May 31, 2015 there are:</p>
+<ul>
+<li><b><!--rinline nDefect --></b> cases with defects or enhancement requests</li>
+<li><b><!--rinline nNonDefect --></b> cases without defects</li>
+</ul>
+
+
+<h2>The summary of time period required to close the cases without defects</h2>
+<p>The period of time needed to close the normal support cases is displayed in the following table:</p>
+<!--begin.rcode,echo=FALSE,results='asis'
+vals<-summary(recordsWithNoDefect$Days.to.Close)
+print(xtable(matrix(vals[c(2,3,5,7)], dimnames=list(c("25th percentile", "50th percentile", "75th percentile", "Not closed"), c("No. of Days")), byrow=T)), type="html") 
+end.rcode-->
+<p>The last row refers to the number of cases yet not closed.</p>
+
+<h2>The summary of time period required to close the cases with defects/ER</h2>
+<!--begin.rcode,echo=FALSE,results='asis'
+vals<-summary(recordsWithDefect$Days.to.Close)
+vals1<-summary(recordsWithDefect$Days.Case.Open.To.Defect.ER)
+print(xtable(matrix(c(vals[c(2,3,5,7)],vals1[c(2,3,5,7)]), nrow=4, dimnames=list(c("25th percentile", "50th percentile", "75th percentile", "Not closed"), c("No. of Days(Overall)","No. of Days from Open To Defect")), byrow=F)), type="html") 
+end.rcode-->
+
+
+
+
+</body>
+</html>
