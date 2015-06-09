@@ -29,11 +29,27 @@ end.rcode-->
 <!--begin.rcode,echo=FALSE,results='asis'
 vals<-summary(recordsWithDefect$Days.to.Close)
 vals1<-summary(recordsWithDefect$Days.Case.Open.To.Defect.ER)
-print(xtable(matrix(c(vals[c(2,3,5,7)],vals1[c(2,3,5,7)]), nrow=4, dimnames=list(c("25th percentile", "50th percentile", "75th percentile", "Not closed"), c("No. of Days(Overall)","No. of Days from Open To Defect")), byrow=F)), type="html") 
+vals2<-summary(recordsWithDefect$Days.from.DefER.to.Close)
+print(xtable(matrix(c(vals[c(2,3,5,7)],vals1[c(2,3,5,7)],vals2[c(2,3,5,7)]), nrow=4, dimnames=list(c("25th percentile", "50th percentile", "75th percentile", "Not closed"), c("No. of Days(Overall)","No. of Days from Open To Defect", "No. of Days from DefER to Close")), byrow=F)), type="html") 
 end.rcode-->
 
+<p>Still we can separate Enhancement Requests delivered by customers and all the other cases acknowledged as Defect/ER and summarize further. It should be noted that some Defect/ER cases still could have been delivered as ER.</p>
 
-
-
+<h3>Enhancements</h3>
+<!--begin.rcode,echo=FALSE,results='asis'
+vals<-summary(recordsER$Days.to.Close)
+vals1<-summary(recordsER$Days.Case.Open.To.Defect.ER)
+vals2<-summary(recordsER$Days.from.DefER.to.Close)
+print(xtable(matrix(c(vals[c(2,3,5,7)],vals1[c(2,3,5,7)],vals2[c(2,3,5,7)]), nrow=4, dimnames=list(c("25th percentile", "50th percentile", "75th percentile", "Not closed"), c("No. of Days(Overall)","No. of Days from Open To Defect", "No. of Days from DefER to Close")), byrow=F)), type="html") 
+end.rcode-->
 </body>
+
+<h3>Defect/ER</h3>
+<!--begin.rcode,echo=FALSE,results='asis'
+vals<-summary(recordsDefect$Days.to.Close)
+vals1<-summary(recordsDefect$Days.Case.Open.To.Defect.ER)
+vals2<-summary(recordsDefect$Days.from.DefER.to.Close)
+print(xtable(matrix(c(vals[c(2,3,5,7)],vals1[c(2,3,5,7)],vals2[c(2,3,5,7)]), nrow=4, dimnames=list(c("25th percentile", "50th percentile", "75th percentile", "Not closed"), c("No. of Days(Overall)","No. of Days from Open To Defect", "No. of Days from DefER to Close")), byrow=F)), type="html") 
+end.rcode-->
+
 </html>

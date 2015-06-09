@@ -79,7 +79,7 @@
 <h2>The summary of time period required to close the cases without defects</h2>
 <p>The period of time needed to close the normal support cases is displayed in the following table:</p>
 <!-- html table generated in R 3.1.3 by xtable 1.7-4 package -->
-<!-- Mon Jun  8 00:11:00 2015 -->
+<!-- Mon Jun  8 21:49:28 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> No. of Days </th>  </tr>
   <tr> <td align="right"> 25th percentile </td> <td align="right"> 2.90 </td> </tr>
@@ -92,18 +92,41 @@
 
 <h2>The summary of time period required to close the cases with defects/ER</h2>
 <!-- html table generated in R 3.1.3 by xtable 1.7-4 package -->
-<!-- Mon Jun  8 00:11:00 2015 -->
+<!-- Mon Jun  8 21:49:28 2015 -->
 <table border=1>
-<tr> <th>  </th> <th> No. of Days(Overall) </th> <th> No. of Days from Open To Defect </th>  </tr>
-  <tr> <td align="right"> 25th percentile </td> <td align="right"> 8.00 </td> <td align="right"> 0.20 </td> </tr>
-  <tr> <td align="right"> 50th percentile </td> <td align="right"> 24.00 </td> <td align="right"> 2.00 </td> </tr>
-  <tr> <td align="right"> 75th percentile </td> <td align="right"> 74.75 </td> <td align="right"> 6.53 </td> </tr>
-  <tr> <td align="right"> Not closed </td> <td align="right"> 907.00 </td> <td align="right"> 434.00 </td> </tr>
+<tr> <th>  </th> <th> No. of Days(Overall) </th> <th> No. of Days from Open To Defect </th> <th> No. of Days from DefER to Close </th>  </tr>
+  <tr> <td align="right"> 25th percentile </td> <td align="right"> 8.00 </td> <td align="right"> 0.20 </td> <td align="right"> 11.30 </td> </tr>
+  <tr> <td align="right"> 50th percentile </td> <td align="right"> 24.00 </td> <td align="right"> 2.00 </td> <td align="right"> 31.45 </td> </tr>
+  <tr> <td align="right"> 75th percentile </td> <td align="right"> 74.75 </td> <td align="right"> 6.53 </td> <td align="right"> 106.00 </td> </tr>
+  <tr> <td align="right"> Not closed </td> <td align="right"> 907.00 </td> <td align="right"> 434.00 </td> <td align="right"> 1330.00 </td> </tr>
    </table>
 
 
+<p>Still we can separate Enhancement Requests delivered by customers and all the other cases acknowledged as Defect/ER and summarize further. It should be noted that some Defect/ER cases still could have been delivered as ER.</p>
 
-
+<h3>Enhancements</h3>
+<!-- html table generated in R 3.1.3 by xtable 1.7-4 package -->
+<!-- Mon Jun  8 21:49:28 2015 -->
+<table border=1>
+<tr> <th>  </th> <th> No. of Days(Overall) </th> <th> No. of Days from Open To Defect </th> <th> No. of Days from DefER to Close </th>  </tr>
+  <tr> <td align="right"> 25th percentile </td> <td align="right"> 6.12 </td> <td align="right"> 0.10 </td> <td align="right"> 17.95 </td> </tr>
+  <tr> <td align="right"> 50th percentile </td> <td align="right"> 24.00 </td> <td align="right"> 1.70 </td> <td align="right"> 55.35 </td> </tr>
+  <tr> <td align="right"> 75th percentile </td> <td align="right"> 103.90 </td> <td align="right"> 6.10 </td> <td align="right"> 191.10 </td> </tr>
+  <tr> <td align="right"> Not closed </td> <td align="right"> 349.00 </td> <td align="right"> 90.00 </td> <td align="right"> 439.00 </td> </tr>
+   </table>
 
 </body>
+
+<h3>Defect/ER</h3>
+<!-- html table generated in R 3.1.3 by xtable 1.7-4 package -->
+<!-- Mon Jun  8 21:49:28 2015 -->
+<table border=1>
+<tr> <th>  </th> <th> No. of Days(Overall) </th> <th> No. of Days from Open To Defect </th> <th> No. of Days from DefER to Close </th>  </tr>
+  <tr> <td align="right"> 25th percentile </td> <td align="right"> 8.10 </td> <td align="right"> 0.20 </td> <td align="right"> 10.38 </td> </tr>
+  <tr> <td align="right"> 50th percentile </td> <td align="right"> 24.10 </td> <td align="right"> 2.00 </td> <td align="right"> 29.85 </td> </tr>
+  <tr> <td align="right"> 75th percentile </td> <td align="right"> 70.00 </td> <td align="right"> 6.70 </td> <td align="right"> 96.02 </td> </tr>
+  <tr> <td align="right"> Not closed </td> <td align="right"> 558.00 </td> <td align="right"> 344.00 </td> <td align="right"> 891.00 </td> </tr>
+   </table>
+
+
 </html>
